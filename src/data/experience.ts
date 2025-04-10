@@ -9,7 +9,8 @@ export const EXPERIENCE: ExperienceShowcaseListItemProps[] = [
     },
     date: "Dec 2024 - Feb 2025",
     location: "Remote",
-    description: "Javascript and Php developer for a startup. Worked on building a web application for the company.",
+    description:
+      "Javascript and Php developer for a startup. Worked on building a web application for the company.",
   },
   // {
   //   title: "Engineering Trainee",

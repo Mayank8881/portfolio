@@ -34,7 +34,6 @@
   }
 }
 
-
 @keyframes borderSweep {
   0% {
     transform: rotate(0deg);
@@ -69,12 +68,8 @@
   );
   animation: borderSweep 4s linear infinite;
   z-index: -1;
-  mask: 
-    linear-gradient(#000 0 0) content-box, 
-    linear-gradient(#000 0 0);
-  -webkit-mask: 
-    linear-gradient(#000 0 0) content-box, 
-    linear-gradient(#000 0 0);
+  mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
   mask-composite: exclude;
   -webkit-mask-composite: destination-out;
   padding: 2px;

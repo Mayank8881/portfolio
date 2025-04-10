@@ -7,7 +7,16 @@ export const PROJECT_SHOWCASE: ProjectShowcaseListItem[] = [
     index: 0,
     title: "InvestyGram",
     href: "/projects",
-    tags: ["Nextjs" ,"Typescript" ,"Gemini-API" ,"MongoDB" ,"Startups"  ,"Shadcn ui" , "Tailwindcss" , "Vercel"],
+    tags: [
+      "Nextjs",
+      "Typescript",
+      "Gemini-API",
+      "MongoDB",
+      "Startups",
+      "Shadcn ui",
+      "Tailwindcss",
+      "Vercel",
+    ],
     image: {
       LIGHT: "/images/projects/investygram.png",
       DARK: "/images/projects/investygram.png",
@@ -17,13 +26,7 @@ export const PROJECT_SHOWCASE: ProjectShowcaseListItem[] = [
     index: 1,
     title: "SmartHire",
     href: "/projects",
-    tags: [
-      "Reactjs",
-      "Tailwindcss",
-      "React-router-dom",
-      "Redux",
-      "Vercel",
-    ],
+    tags: ["Reactjs", "Tailwindcss", "React-router-dom", "Redux", "Vercel"],
     image: {
       LIGHT: "/images/projects/smarthire.png",
       DARK: "/images/projects/smarthire.png",
@@ -64,7 +67,7 @@ export const PROJECTS_CARD: ProjectCardProps[] = [
     ],
     description:
       "Developed a resume shortlisting and interview preparation platform, utilizing machine learning for automated resume filtering. Built with Next.js, Clerk,NextAuth, and PostgreSQL.Achieved an increase in user satisfaction scores from new features by gathering feedback from 200 users during testing phases.",
-          sourceCodeHref: "https://github.com/Mayank8881/SmartHire",
+    sourceCodeHref: "https://github.com/Mayank8881/SmartHire",
     liveWebsiteHref: "https://smart-hire-ebon.vercel.app/",
   },
   {

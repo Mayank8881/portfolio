@@ -20,7 +20,7 @@
 //     - Users behind certain proxies or networks might share the same IP address.
 //     - Determined attackers can still potentially circumvent these measures.
 //     - Privacy concerns: Collecting IP addresses and user agents may raise privacy considerations.
-  
+
 //   If either the client's IP address or user agent is missing, a fallback mechanism defaults to using a UUID stored in cookies.
 //   - Pros: Ensures a default identification mechanism is in place.
 //   - Cons: UUIDs may not be entirely foolproof and can be manipulated by users.

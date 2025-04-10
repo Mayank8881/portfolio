@@ -30,7 +30,6 @@ import MuiSvg from "@/public/icons/mui.svg";
 import ViteSvg from "@/public/icons/vite.svg";
 import ShadcnSvg from "@/public/icons/shadcn.svg";
 
-
 // Backend
 import NodejsSvg from "@/public/icons/nodejs.svg";
 

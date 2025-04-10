@@ -15,7 +15,9 @@ export default function ContactForm() {
   const [responseMsg, setResponseMsg] = useState<string>("");
   const [isError, setIsError] = useState<boolean>(false);
 
-  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
@@ -45,10 +47,13 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="p-8 rounded-xl shadow-md border border-[hsl(var(--border))]">
+    <div className="rounded-xl border border-[hsl(var(--border))] p-8 shadow-md">
       <form onSubmit={handleSubmit} className="space-y-6">
         <div>
-          <label htmlFor="name" className="block text-sm font-medium text-[hsl(var(--foreground))]">
+          <label
+            htmlFor="name"
+            className="block text-sm font-medium text-[hsl(var(--foreground))]"
+          >
             Name
           </label>
           <input
@@ -63,7 +68,10 @@ export default function ContactForm() {
         </div>
 
         <div>
-          <label htmlFor="email" className="block text-sm font-medium text-[hsl(var(--foreground))]">
+          <label
+            htmlFor="email"
+            className="block text-sm font-medium text-[hsl(var(--foreground))]"
+          >
             Email
           </label>
           <input
@@ -78,7 +86,10 @@ export default function ContactForm() {
         </div>
 
         <div>
-          <label htmlFor="message" className="block text-sm font-medium text-[hsl(var(--foreground))]">
+          <label
+            htmlFor="message"
+            className="block text-sm font-medium text-[hsl(var(--foreground))]"
+          >
             Message
           </label>
           <textarea
@@ -94,13 +105,17 @@ export default function ContactForm() {
 
         <button
           type="submit"
-          className="inline-flex justify-center px-6 py-2 text-white bg-[hsl(var(--accent))] hover:bg-[hsl(var(--accent))] hover:text-rose-100 hover:border-rose-300 rounded-md shadow transition-colors duration-200"
+          className="inline-flex justify-center rounded-md bg-[hsl(var(--accent))] px-6 py-2 text-white shadow transition-colors duration-200 hover:border-rose-300 hover:bg-[hsl(var(--accent))] hover:text-rose-100"
         >
           Send Message
         </button>
 
         {responseMsg && (
-          <p className={`mt-4 text-sm ${isError ? "text-red-600" : "text-green-600"}`}>
+          <p
+            className={`mt-4 text-sm ${
+              isError ? "text-red-600" : "text-green-600"
+            }`}
+          >
             {responseMsg}
           </p>
         )}

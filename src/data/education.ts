@@ -16,7 +16,7 @@ export const EDUCATION: ExperienceShowcaseListItemProps[] = [
     title: "Higher Secondary School",
     organisation: {
       name: "Kendriya Vidyalaya",
-      href: "https://afsamla.kvs.ac.in/"
+      href: "https://afsamla.kvs.ac.in/",
     },
     date: "2020-2022",
     location: "Amla,Madhya Pradesh",
