@@ -1,5 +1,5 @@
 // src/lib/nodemailer.ts
-import nodemailer from "nodemailer";
+import nodemailer from 'nodemailer';
 
 export interface SendEmailParams {
   name: string;
@@ -11,7 +11,7 @@ export async function sendEmail({ name, email, message }: SendEmailParams) {
   const transporter = nodemailer.createTransport({
     host: process.env.SMTP_HOST, // e.g., smtp.gmail.com
     port: Number(process.env.SMTP_PORT), // e.g., 465
-    secure: process.env.SMTP_SECURE === "true", // true for 465 port, false for others
+    secure: process.env.SMTP_SECURE === 'true', // true for 465 port, false for others
     auth: {
       user: process.env.SMTP_USER, // SMTP username
       pass: process.env.SMTP_PASS, // SMTP password

@@ -1,16 +1,16 @@
-import { useState } from "react";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { useState } from 'react';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion } from 'framer-motion';
 
-import MenuLogo from "@/components/utility/menu-button";
-import ThemeSwitch from "@/components/utility/theme-switch";
-import AnimatedLogo from "@/animation/animated-logo";
-import MobileMenu from "@/components/utility/mobile-menu";
-import { classNames } from "@/utility/classNames";
-import MMM from "@/public/munkss.png";
-import Image from "next/image";
+import MenuLogo from '@/components/utility/menu-button';
+import ThemeSwitch from '@/components/utility/theme-switch';
+import AnimatedLogo from '@/animation/animated-logo';
+import MobileMenu from '@/components/utility/mobile-menu';
+import { classNames } from '@/utility/classNames';
+import MMM from '@/public/munkss.png';
+import Image from 'next/image';
 
 export type NavbarRoute = {
   title: string;
@@ -44,7 +44,7 @@ export default function Navbar(props: NavbarProps) {
             <AnimatedLogo />
           </div> */}
           <div className="relative h-16 w-16">
-            {" "}
+            {' '}
             {/* Adjust width/height via Tailwind */}
             <Image src={MMM} alt="MMM Logo" fill className="object-contain" />
           </div>
@@ -61,9 +61,9 @@ export default function Navbar(props: NavbarProps) {
                     href={_link.href}
                     className={classNames(
                       pathName === _link.href
-                        ? "font-semibold text-background dark:hover:text-foreground"
-                        : "text-foreground",
-                      "group relative mx-3 rounded-full px-3 py-2 transition-colors duration-200",
+                        ? 'font-semibold text-background dark:hover:text-foreground'
+                        : 'text-foreground',
+                      'group relative mx-3 rounded-full px-3 py-2 transition-colors duration-200',
                     )}
                   >
                     {_link.href === pathName && (
@@ -72,7 +72,7 @@ export default function Navbar(props: NavbarProps) {
                         animate={{
                           transition: {
                             x: {
-                              type: "spring",
+                              type: 'spring',
                               stiffness: 300,
                               damping: 30,
                             },

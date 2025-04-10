@@ -1,13 +1,13 @@
-import type { AppProps } from "next/app";
-import { useRouter } from "next/router";
+import type { AppProps } from 'next/app';
+import { useRouter } from 'next/router';
 
-import { Analytics } from "@vercel/analytics/react";
-import { ThemeProvider } from "next-themes";
-import { AnimatePresence } from "framer-motion";
+import { Analytics } from '@vercel/analytics/react';
+import { ThemeProvider } from 'next-themes';
+import { AnimatePresence } from 'framer-motion';
 
-import MainLayout from "@/layout/main-layout";
-import CursorTrailCanvas from "@/components/cursor-trail-canvas";
-import "@/styles/globals.css";
+import MainLayout from '@/layout/main-layout';
+import CursorTrailCanvas from '@/components/cursor-trail-canvas';
+import '@/styles/globals.css';
 
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();

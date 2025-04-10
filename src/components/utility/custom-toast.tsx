@@ -1,5 +1,5 @@
-import { ReactNode, useEffect } from "react";
-import { createPortal } from "react-dom";
+import { ReactNode, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 
 export interface CustomToastProps {
   children: ReactNode;
@@ -25,7 +25,7 @@ export default function CustomToast({
     };
   }, [duration, onClose]);
 
-  if (typeof window === "undefined" || !open) {
+  if (typeof window === 'undefined' || !open) {
     return null;
   }
 

@@ -4,87 +4,87 @@ import {
   SiPrisma,
   SiNextdotjs,
   SiFlask,
-} from "react-icons/si";
+} from 'react-icons/si';
 import {
   FramerMotionIcon,
   ReactRouterDomIcon,
   VitePwaIcon,
-} from "@/components/icons";
-import { type SkillsShowcaseProps } from "@/components/skills/skills-showcase";
+} from '@/components/icons';
+import { type SkillsShowcaseProps } from '@/components/skills/skills-showcase';
 
 // Languages
-import HtmlSvg from "@/public/icons/html.svg";
-import CsssSvg from "@/public/icons/css.svg";
-import SassSvg from "@/public/icons/sass.svg";
-import JavascriptSvg from "@/public/icons/javascript.svg";
-import TypescriptSvg from "@/public/icons/typescript.svg";
-import PythonSvg from "@/public/icons/python.svg";
-import javaSvg from "@/public/icons/java.svg";
+import HtmlSvg from '@/public/icons/html.svg';
+import CsssSvg from '@/public/icons/css.svg';
+import SassSvg from '@/public/icons/sass.svg';
+import JavascriptSvg from '@/public/icons/javascript.svg';
+import TypescriptSvg from '@/public/icons/typescript.svg';
+import PythonSvg from '@/public/icons/python.svg';
+import javaSvg from '@/public/icons/java.svg';
 
 // Libraries
-import ReactjsSvg from "@/public/icons/reactjs.svg";
-import SolidjsSvg from "@/public/icons/solidjs.svg";
-import ReduxSvg from "@/public/icons/redux.svg";
-import TailwindcssSvg from "@/public/icons/tailwindcss.svg";
-import MuiSvg from "@/public/icons/mui.svg";
-import ViteSvg from "@/public/icons/vite.svg";
-import ShadcnSvg from "@/public/icons/shadcn.svg";
+import ReactjsSvg from '@/public/icons/reactjs.svg';
+import SolidjsSvg from '@/public/icons/solidjs.svg';
+import ReduxSvg from '@/public/icons/redux.svg';
+import TailwindcssSvg from '@/public/icons/tailwindcss.svg';
+import MuiSvg from '@/public/icons/mui.svg';
+import ViteSvg from '@/public/icons/vite.svg';
+import ShadcnSvg from '@/public/icons/shadcn.svg';
 
 // Backend
-import NodejsSvg from "@/public/icons/nodejs.svg";
+import NodejsSvg from '@/public/icons/nodejs.svg';
 
 // Database and ORMS
-import MongoDBSvg from "@/public/icons/mongodb.svg";
-import PostgressSvg from "@/public/icons/postgresql.svg";
-import MySqlSvg from "@/public/icons/mysql.svg";
-import SupabaseSvg from "@/public/icons/supabase.svg";
-import FirebaseSvg from "@/public/icons/firebase.svg";
+import MongoDBSvg from '@/public/icons/mongodb.svg';
+import PostgressSvg from '@/public/icons/postgresql.svg';
+import MySqlSvg from '@/public/icons/mysql.svg';
+import SupabaseSvg from '@/public/icons/supabase.svg';
+import FirebaseSvg from '@/public/icons/firebase.svg';
 
 // Tools and Tech
-import GitSvg from "@/public/icons/git.svg";
-import DockerSvg from "@/public/icons/docker.svg";
-import AwsSvg from "@/public/icons/aws.svg";
-import PostmanSvg from "@/public/icons/postman.svg";
+import GitSvg from '@/public/icons/git.svg';
+import DockerSvg from '@/public/icons/docker.svg';
+import AwsSvg from '@/public/icons/aws.svg';
+import PostmanSvg from '@/public/icons/postman.svg';
 
-export const SKILLS_DATA: SkillsShowcaseProps["skills"] = [
+export const SKILLS_DATA: SkillsShowcaseProps['skills'] = [
   {
-    sectionName: "Languages",
+    sectionName: 'Languages',
     skills: [
       {
-        name: "HTML",
+        name: 'HTML',
         icon: HtmlSvg,
       },
       {
-        name: "CSS",
+        name: 'CSS',
         icon: CsssSvg,
       },
       {
-        name: "JAVA",
+        name: 'JAVA',
         icon: javaSvg,
       },
       {
-        name: "Javascript",
+        name: 'Javascript',
         icon: JavascriptSvg,
       },
       {
-        name: "Typescript",
+        name: 'Typescript',
         icon: TypescriptSvg,
       },
       {
-        name: "Python",
+        name: 'Python',
         icon: PythonSvg,
       },
     ],
   },
   {
-    sectionName: "Libraries and Frameworks",
+    sectionName: 'Libraries and Frameworks',
     skills: [
       {
-        name: "Reactjs",
+        name: 'Reactjs',
         icon: ReactjsSvg,
       },
       {
-        name: "Nextjs",
+        name: 'Nextjs',
         icon: SiNextdotjs,
       },
       // {
@@ -92,74 +92,74 @@ export const SKILLS_DATA: SkillsShowcaseProps["skills"] = [
       //   icon: ReactRouterDomIcon,
       // },
       {
-        name: "Tailwindcss",
+        name: 'Tailwindcss',
         icon: TailwindcssSvg,
       },
       {
-        name: "Shadcn",
+        name: 'Shadcn',
         icon: ShadcnSvg,
       },
       {
-        name: "Framer motion",
+        name: 'Framer motion',
         icon: FramerMotionIcon,
       },
       {
-        name: "Vite",
+        name: 'Vite',
         icon: ViteSvg,
       },
     ],
   },
   {
-    sectionName: "Backend",
+    sectionName: 'Backend',
     skills: [
       {
-        name: "Nodejs",
+        name: 'Nodejs',
         icon: NodejsSvg,
       },
       {
-        name: "Express",
+        name: 'Express',
         icon: SiExpress,
       },
       {
-        name: "Flask",
+        name: 'Flask',
         icon: SiFlask,
       },
     ],
   },
   {
-    sectionName: "Databases and ORMs",
+    sectionName: 'Databases and ORMs',
     skills: [
       {
-        name: "MongoDB",
+        name: 'MongoDB',
         icon: MongoDBSvg,
       },
       {
-        name: "Supabase",
+        name: 'Supabase',
         icon: SupabaseSvg,
       },
       {
-        name: "Firebase",
+        name: 'Firebase',
         icon: FirebaseSvg,
       },
       {
-        name: "MySql",
+        name: 'MySql',
         icon: MySqlSvg,
       },
       {
-        name: "Postgress",
+        name: 'Postgress',
         icon: PostgressSvg,
       },
     ],
   },
   {
-    sectionName: "Tools and Technologies",
+    sectionName: 'Tools and Technologies',
     skills: [
       {
-        name: "Git",
+        name: 'Git',
         icon: GitSvg,
       },
       {
-        name: "Vercel",
+        name: 'Vercel',
         icon: MongoDBSvg,
       },
       // {
@@ -171,7 +171,7 @@ export const SKILLS_DATA: SkillsShowcaseProps["skills"] = [
       //   icon: AwsSvg,
       // },
       {
-        name: "Postman",
+        name: 'Postman',
         icon: PostmanSvg,
       },
     ],

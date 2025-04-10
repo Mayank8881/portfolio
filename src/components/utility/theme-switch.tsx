@@ -1,5 +1,5 @@
-import { Dispatch, SetStateAction, useEffect, useState } from "react";
-import { useTheme } from "next-themes";
+import { Dispatch, SetStateAction, useEffect, useState } from 'react';
+import { useTheme } from 'next-themes';
 
 export interface ThemeSwitchProps {
   setClose?: Dispatch<SetStateAction<boolean>>;
@@ -15,7 +15,7 @@ export default function ThemeSwitch(props: ThemeSwitchProps) {
     if (props.setClose) {
       props.setClose(false);
     }
-    setTheme(resolvedTheme === "dark" ? "light" : "dark");
+    setTheme(resolvedTheme === 'dark' ? 'light' : 'dark');
   };
 
   return (
@@ -26,7 +26,7 @@ export default function ThemeSwitch(props: ThemeSwitchProps) {
       onClick={handleThemeChange}
     >
       {mounted &&
-        (theme === "dark" || resolvedTheme === "dark" ? (
+        (theme === 'dark' || resolvedTheme === 'dark' ? (
           <>
             <svg
               stroke="currentColor"

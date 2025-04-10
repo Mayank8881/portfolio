@@ -1,10 +1,10 @@
-import { NextSeo } from "next-seo";
+import { NextSeo } from 'next-seo';
 
-import AboutHero from "@/components/about-hero";
-import ExperienceShowcaseList from "@/components/experience/experience-showcase-list";
-import { EXPERIENCE } from "@/data/experience";
-import { EDUCATION } from "@/data/education";
-import { siteMetadata } from "@/data/siteMetaData.mjs";
+import AboutHero from '@/components/about-hero';
+import ExperienceShowcaseList from '@/components/experience/experience-showcase-list';
+import { EXPERIENCE } from '@/data/experience';
+import { EDUCATION } from '@/data/education';
+import { siteMetadata } from '@/data/siteMetaData.mjs';
 
 export default function About() {
   return (
@@ -15,26 +15,26 @@ export default function About() {
         canonical={`${siteMetadata.siteUrl}/about`}
         openGraph={{
           url: `${siteMetadata.siteUrl}/about`,
-          title: "Learn About Mayank Mokhere - Software Developer",
+          title: 'Learn About Mayank Mokhere - Software Developer',
           description:
-            "Dive into the story of Mayank Mokhere, a Software Developer. Uncover the experiences, skills, and passion that fuel a commitment to delivering exceptional web solutions.",
+            'Dive into the story of Mayank Mokhere, a Software Developer. Uncover the experiences, skills, and passion that fuel a commitment to delivering exceptional web solutions.',
           images: [
             {
               url: `${siteMetadata.siteUrl}`,
-              alt: "Mayank Mokhere - Portfolio Image",
+              alt: 'Mayank Mokhere - Portfolio Image',
             },
           ],
           siteName: siteMetadata.siteName,
-          type: "website",
+          type: 'website',
         }}
         twitter={{
-          cardType: "summary_large_image",
+          cardType: 'summary_large_image',
         }}
         additionalMetaTags={[
           {
-            property: "keywords",
+            property: 'keywords',
             content:
-              "Software Developer portfolio, Software Developer, React Developer, Frontend Developer, Web Developer, JavaScript, HTML, CSS, Professional Journey, Skills, Passion for Web Development",
+              'Software Developer portfolio, Software Developer, React Developer, Frontend Developer, Web Developer, JavaScript, HTML, CSS, Professional Journey, Skills, Passion for Web Development',
           },
         ]}
       />

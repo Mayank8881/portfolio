@@ -1,8 +1,8 @@
-import Link from "next/link";
+import Link from 'next/link';
 
-import { motion } from "framer-motion";
+import { motion } from 'framer-motion';
 
-import { classNames } from "@/utility/classNames";
+import { classNames } from '@/utility/classNames';
 
 export type ProjectShowcaseListItem = {
   index: number;
@@ -24,16 +24,16 @@ export interface ProjectShowcaseListProps {
 export default function ProjectShowcaseList(props: ProjectShowcaseListProps) {
   return (
     <motion.div
-      className={classNames("group flex gap-4 ")}
+      className={classNames('group flex gap-4 ')}
       onHoverStart={() => props.toggleList(props.data.index)}
       onFocus={() => props.toggleList(props.data.index)}
     >
       <span
         className={classNames(
-          "hidden text-6xl font-semibold transition-colors duration-300 lg:block",
+          'hidden text-6xl font-semibold transition-colors duration-300 lg:block',
           props.activeProject === props.data.index
-            ? "text-accent"
-            : "text-accent/70",
+            ? 'text-accent'
+            : 'text-accent/70',
         )}
       >
         {props.data.index + 1}.
@@ -45,10 +45,10 @@ export default function ProjectShowcaseList(props: ProjectShowcaseListProps) {
         <Link href={props.data.href} className="relative max-w-max">
           <span
             className={classNames(
-              "hidden text-6xl font-semibold transition-colors duration-300 lg:block",
+              'hidden text-6xl font-semibold transition-colors duration-300 lg:block',
               props.activeProject === props.data.index
-                ? "text-accent"
-                : "text-accent/70",
+                ? 'text-accent'
+                : 'text-accent/70',
             )}
           >
             {props.data.title}
@@ -58,8 +58,8 @@ export default function ProjectShowcaseList(props: ProjectShowcaseListProps) {
           </span>
           <span
             className={classNames(
-              "absolute -bottom-1 left-0 hidden h-1 origin-left rounded-lg bg-accent transition-[width] duration-300 group-hover:w-full lg:block",
-              props.activeProject === props.data.index ? "w-full" : "w-0",
+              'absolute -bottom-1 left-0 hidden h-1 origin-left rounded-lg bg-accent transition-[width] duration-300 group-hover:w-full lg:block',
+              props.activeProject === props.data.index ? 'w-full' : 'w-0',
             )}
           ></span>
         </Link>

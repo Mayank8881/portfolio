@@ -1,6 +1,6 @@
-import { ReactNode } from "react";
+import { ReactNode } from 'react';
 
-import { motion } from "framer-motion";
+import { motion } from 'framer-motion';
 
 export interface FadeUpProps {
   children: ReactNode;
@@ -20,7 +20,7 @@ export default function FadeUp({
     y: 0,
     transition: {
       duration,
-      ease: "easeInOut",
+      ease: 'easeInOut',
       delay,
     },
   };

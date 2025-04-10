@@ -1,12 +1,12 @@
-import { Dispatch, Fragment, SetStateAction } from "react";
-import { useRouter } from "next/router";
-import { usePathname } from "next/navigation";
+import { Dispatch, Fragment, SetStateAction } from 'react';
+import { useRouter } from 'next/router';
+import { usePathname } from 'next/navigation';
 
-import { Dialog, Transition } from "@headlessui/react";
+import { Dialog, Transition } from '@headlessui/react';
 
-import ThemeSwitch from "@/components/utility/theme-switch";
-import { type NavbarProps } from "@/layout/navbar";
-import { classNames } from "@/utility/classNames";
+import ThemeSwitch from '@/components/utility/theme-switch';
+import { type NavbarProps } from '@/layout/navbar';
+import { classNames } from '@/utility/classNames';
 
 export interface MobileMenuProps extends NavbarProps {
   openMenu: boolean;
@@ -49,8 +49,8 @@ export default function MobileMenu({
                   >
                     <span
                       className={classNames(
-                        pathName === link.href ? "w-full" : "w-0",
-                        "absolute -bottom-1 left-0 h-1 rounded-lg bg-accent transition-[width] duration-300 group-hover:w-full",
+                        pathName === link.href ? 'w-full' : 'w-0',
+                        'absolute -bottom-1 left-0 h-1 rounded-lg bg-accent transition-[width] duration-300 group-hover:w-full',
                       )}
                     ></span>
                     {link.title}

@@ -2,12 +2,12 @@
 // https://github.com/vercel/next.js/blob/canary/examples/api-routes-rate-limit/utils/rate-limit.ts
 // This can cause the server to slow down if the cache is hold for longer time for many users.
 
-import { NextApiResponse, NextApiRequest } from "next";
-import { LRUCache } from "lru-cache";
-import { nanoid } from "nanoid";
+import { NextApiResponse, NextApiRequest } from 'next';
+import { LRUCache } from 'lru-cache';
+import { nanoid } from 'nanoid';
 
-const RATE_LIMITER_USER_ID_COOKIE_NAME = "userUuid" as const;
-const RATE_LIMITER_EXPIRY_DATE_COOKIE_NAME = "userUuid_expires" as const;
+const RATE_LIMITER_USER_ID_COOKIE_NAME = 'userUuid' as const;
+const RATE_LIMITER_EXPIRY_DATE_COOKIE_NAME = 'userUuid_expires' as const;
 
 export type rateLimiterApiOptions = {
   uniqueTokenPerInterval?: number;
@@ -48,7 +48,7 @@ export function rateLimiterApi(options?: rateLimiterApiOptions) {
         try {
           const userId = options?.getUserId(req, res);
           if (!userId) {
-            reject({ status: 400, message: "Token missing" });
+            reject({ status: 400, message: 'Token missing' });
             return;
           }
           const token = `user:${userId}`;
@@ -61,19 +61,19 @@ export function rateLimiterApi(options?: rateLimiterApiOptions) {
 
           const currentUsage = tokenCount[0];
           const isRateLimited = currentUsage >= limitPerHour;
-          res.setHeader("X-RateLimit-Limit", limitPerHour);
+          res.setHeader('X-RateLimit-Limit', limitPerHour);
           res.setHeader(
-            "X-RateLimit-Remaining",
+            'X-RateLimit-Remaining',
             isRateLimited ? 0 : limitPerHour - currentUsage,
           );
 
           if (isRateLimited) {
-            reject({ status: 429, message: "Rate limit exceeded" });
+            reject({ status: 429, message: 'Rate limit exceeded' });
           } else {
-            resolve({ status: 200, message: "Success" });
+            resolve({ status: 200, message: 'Success' });
           }
         } catch {
-          reject({ status: 500, message: "Internal server error" });
+          reject({ status: 500, message: 'Internal server error' });
         }
       }),
   };
@@ -81,8 +81,8 @@ export function rateLimiterApi(options?: rateLimiterApiOptions) {
 
 export const getUserId = (req: NextApiRequest, res: NextApiResponse) => {
   const userIp =
-    req.headers["x-forwarded-for"] || req.socket.remoteAddress || "";
-  const userAgent = req.headers["user-agent"] || "";
+    req.headers['x-forwarded-for'] || req.socket.remoteAddress || '';
+  const userAgent = req.headers['user-agent'] || '';
 
   // If User has an userIp and userAgent return that
   // No need to set cookies as the userIp and userAgent are sufficient to rateLimit
@@ -116,7 +116,7 @@ export const getUserId = (req: NextApiRequest, res: NextApiResponse) => {
 const setUserTokenCookie = (res: NextApiResponse) => {
   const userUuidToken = nanoid(20);
   res.setHeader(
-    "Set-Cookie",
+    'Set-Cookie',
     `${RATE_LIMITER_USER_ID_COOKIE_NAME}=${userUuidToken}; Max-Age=${
       60 * 60 * 24
     }; SameSite=Strict`,
@@ -128,7 +128,7 @@ const setTokenExpiryCookie = (res: NextApiResponse) => {
   const newExpirationDate = new Date();
   newExpirationDate.setSeconds(newExpirationDate.getSeconds() + 60 * 60 * 24);
   res.setHeader(
-    "Set-Cookie",
+    'Set-Cookie',
     `${RATE_LIMITER_EXPIRY_DATE_COOKIE_NAME}=${newExpirationDate.toUTCString()}; Max-Age=${
       60 * 60 * 24
     }; SameSite=Strict`,

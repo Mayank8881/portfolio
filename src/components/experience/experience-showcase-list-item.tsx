@@ -1,7 +1,7 @@
-import { RefObject, useRef } from "react";
-import Link from "next/link";
+import { RefObject, useRef } from 'react';
+import Link from 'next/link';
 
-import { motion, useScroll } from "framer-motion";
+import { motion, useScroll } from 'framer-motion';
 
 export interface ExperienceListIconProps {
   iconRef: RefObject<HTMLElement>;
@@ -10,7 +10,7 @@ export interface ExperienceListIconProps {
 function ShowCaseLiIcon(props: ExperienceListIconProps) {
   const { scrollYProgress } = useScroll({
     target: props.iconRef,
-    offset: ["center end", "center center"],
+    offset: ['center end', 'center center'],
     layoutEffect: false,
   });
   return (
@@ -59,12 +59,12 @@ export default function ExperienceShowcaseListItem(
         initial={{ y: 50 }}
         whileInView={{ y: 0 }}
         transition={{
-          type: "spring",
+          type: 'spring',
           duration: 0.4,
         }}
       >
         <h3 className="text-base font-bold text-foreground sm:text-xl md:text-2xl">
-          {props.title}{" "}
+          {props.title}{' '}
           <Link
             href={props.organisation.href}
             className="cursor-pointer text-accent"

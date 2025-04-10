@@ -1,13 +1,13 @@
-import { useMemo, useState } from "react";
-import Link from "next/link";
-import Image from "next/image";
+import { useMemo, useState } from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
 
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion } from 'framer-motion';
 
-import { ArrowTopRight } from "@/components/icons";
+import { ArrowTopRight } from '@/components/icons';
 import ProjectShowcaseList, {
   type ProjectShowcaseListItem,
-} from "@/components/projects/project-showcase-list";
+} from '@/components/projects/project-showcase-list';
 
 const generateImageData = (proj: ProjectShowcaseListItem[]) => {
   return proj.map((p) => p.image);
@@ -36,17 +36,17 @@ export default function ProjectShowcase(props: ProjectShowcaseProps) {
           <AnimatePresence>
             <motion.div
               key={props.projects[currentImage].title}
-              initial={{ x: "100%", opacity: 0 }}
+              initial={{ x: '100%', opacity: 0 }}
               animate={{
-                x: "55%",
-                y: "50%",
+                x: '55%',
+                y: '50%',
                 opacity: 1,
                 transition: {
                   duration: 0.5,
                 },
               }}
               transition={{
-                type: "spring",
+                type: 'spring',
                 stiffness: 100,
               }}
               className="absolute right-0 top-0 -z-50"

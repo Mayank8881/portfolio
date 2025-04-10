@@ -1,15 +1,15 @@
-import { AnimatePresence, Variants, motion } from "framer-motion";
+import { AnimatePresence, Variants, motion } from 'framer-motion';
 
 export default function AnimatedLogo() {
   const iconVariant: Variants = {
     hidden: {
       pathLength: 0,
-      fill: "rgba(0, 0, 0, 0)",
+      fill: 'rgba(0, 0, 0, 0)',
     },
     visible: {
       pathLength: 1,
       // Set fill as per your theme
-      fill: "#1f8d93",
+      fill: '#1f8d93',
     },
   };
 
@@ -27,7 +27,7 @@ export default function AnimatedLogo() {
           initial="hidden"
           animate="visible"
           transition={{
-            default: { duration: 3, ease: "easeInOut" },
+            default: { duration: 3, ease: 'easeInOut' },
             fill: { duration: 3, ease: [1, 0, 0.8, 1] },
           }}
         />

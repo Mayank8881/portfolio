@@ -1,13 +1,13 @@
-import { NextSeo } from "next-seo";
+import { NextSeo } from 'next-seo';
 
-import LandingHero from "@/components/landing-hero";
-import SkillsShowcase from "@/components/skills/skills-showcase";
-import ProjectShowcase from "@/components/projects/project-showcase";
-import ContactForm from "@/components/ContactForm";
+import LandingHero from '@/components/landing-hero';
+import SkillsShowcase from '@/components/skills/skills-showcase';
+import ProjectShowcase from '@/components/projects/project-showcase';
+import ContactForm from '@/components/ContactForm';
 
-import { PROJECT_SHOWCASE } from "@/data/projects";
-import { SKILLS_DATA } from "@/data/skills";
-import { siteMetadata } from "@/data/siteMetaData.mjs";
+import { PROJECT_SHOWCASE } from '@/data/projects';
+import { SKILLS_DATA } from '@/data/skills';
+import { siteMetadata } from '@/data/siteMetaData.mjs';
 
 export default function Home() {
   return (
@@ -18,26 +18,26 @@ export default function Home() {
         canonical={siteMetadata.siteUrl}
         openGraph={{
           url: siteMetadata.siteUrl,
-          title: "Mayank Mokhere - Software Developer",
+          title: 'Mayank Mokhere - Software Developer',
           description:
-            "Dive into the world of web development with Mayank Mokhere. Discover a Software Developer with 2 years of expertise, showcasing cutting-edge projects and a commitment to crafting exceptional user interfaces.",
+            'Dive into the world of web development with Mayank Mokhere. Discover a Software Developer with 2 years of expertise, showcasing cutting-edge projects and a commitment to crafting exceptional user interfaces.',
           images: [
             {
               url: `${siteMetadata.siteUrl}`,
-              alt: "Mayank Mokhere - Portfolio Image",
+              alt: 'Mayank Mokhere - Portfolio Image',
             },
           ],
           siteName: siteMetadata.siteName,
-          type: "website",
+          type: 'website',
         }}
         twitter={{
-          cardType: "summary_large_image",
+          cardType: 'summary_large_image',
         }}
         additionalMetaTags={[
           {
-            property: "keywords",
+            property: 'keywords',
             content:
-              "React Developer, Software Developer, Frontend Developer, Web Developer, JavaScript, HTML, CSS, Portfolio, UI/UX, React.js, Frontend Development, Web Development, JavaScript Developer, Responsive Design",
+              'React Developer, Software Developer, Frontend Developer, Web Developer, JavaScript, HTML, CSS, Portfolio, UI/UX, React.js, Frontend Development, Web Development, JavaScript Developer, Responsive Design',
           },
         ]}
       />

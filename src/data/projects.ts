@@ -1,89 +1,89 @@
-import { type ProjectCardProps } from "@/components/projects/project-card";
-import { type ProjectShowcaseListItem } from "@/components/projects/project-showcase-list";
-import { siteMetadata } from "@/data/siteMetaData.mjs";
+import { type ProjectCardProps } from '@/components/projects/project-card';
+import { type ProjectShowcaseListItem } from '@/components/projects/project-showcase-list';
+import { siteMetadata } from '@/data/siteMetaData.mjs';
 
 export const PROJECT_SHOWCASE: ProjectShowcaseListItem[] = [
   {
     index: 0,
-    title: "InvestyGram",
-    href: "/projects",
+    title: 'InvestyGram',
+    href: '/projects',
     tags: [
-      "Nextjs",
-      "Typescript",
-      "Gemini-API",
-      "MongoDB",
-      "Startups",
-      "Shadcn ui",
-      "Tailwindcss",
-      "Vercel",
+      'Nextjs',
+      'Typescript',
+      'Gemini-API',
+      'MongoDB',
+      'Startups',
+      'Shadcn ui',
+      'Tailwindcss',
+      'Vercel',
     ],
     image: {
-      LIGHT: "/images/projects/investygram.png",
-      DARK: "/images/projects/investygram.png",
+      LIGHT: '/images/projects/investygram.png',
+      DARK: '/images/projects/investygram.png',
     },
   },
   {
     index: 1,
-    title: "SmartHire",
-    href: "/projects",
-    tags: ["Reactjs", "Tailwindcss", "React-router-dom", "Redux", "Vercel"],
+    title: 'SmartHire',
+    href: '/projects',
+    tags: ['Reactjs', 'Tailwindcss', 'React-router-dom', 'Redux', 'Vercel'],
     image: {
-      LIGHT: "/images/projects/smarthire.png",
-      DARK: "/images/projects/smarthire.png",
+      LIGHT: '/images/projects/smarthire.png',
+      DARK: '/images/projects/smarthire.png',
     },
   },
   {
     index: 2,
-    title: "DocuTrace",
-    href: "/projects",
-    tags: ["Reactjs", "Blockchain", "Tailwindcss", "Vercel", "React DND"],
+    title: 'DocuTrace',
+    href: '/projects',
+    tags: ['Reactjs', 'Blockchain', 'Tailwindcss', 'Vercel', 'React DND'],
     image: {
-      LIGHT: "/images/projects/kanbanLight.webp",
-      DARK: "/images/projects/kanbanDark.webp",
+      LIGHT: '/images/projects/kanbanLight.webp',
+      DARK: '/images/projects/kanbanDark.webp',
     },
   },
 ];
 
 export const PROJECTS_CARD: ProjectCardProps[] = [
   {
-    name: "InvestyGram",
-    favicon: "/images/projects/logos/covidtracker.ico",
+    name: 'InvestyGram',
+    favicon: '/images/projects/logos/covidtracker.ico',
     imageUrl: [
-      "/images/projects/investygram.png",
-      "/images/projects/investygram.png",
+      '/images/projects/investygram.png',
+      '/images/projects/investygram.png',
     ],
     description:
-      "Developed a startup-investor matchmaking platform using Next.js, MongoDB, and AI-driven algorithms, optimizing funding accessibility and investor discovery.Implemented a real-time funding system with secure authentication using JWT, enhancing transparency and reducing inefficiencies in startup investments.Engineered a scalable backend with MongoDB, enabling structured investment data storage and seamless investor-startup interactions.Designed an intuitive UI with Tailwind CSS, improving user experience and engagement for both investors and startups.",
-    sourceCodeHref: "https://github.com/Code4Both/InvestyGram",
-    liveWebsiteHref: "https://investygram.vercel.app/",
+      'Developed a startup-investor matchmaking platform using Next.js, MongoDB, and AI-driven algorithms, optimizing funding accessibility and investor discovery.Implemented a real-time funding system with secure authentication using JWT, enhancing transparency and reducing inefficiencies in startup investments.Engineered a scalable backend with MongoDB, enabling structured investment data storage and seamless investor-startup interactions.Designed an intuitive UI with Tailwind CSS, improving user experience and engagement for both investors and startups.',
+    sourceCodeHref: 'https://github.com/Code4Both/InvestyGram',
+    liveWebsiteHref: 'https://investygram.vercel.app/',
   },
   {
-    name: "SmartHire",
-    favicon: "/images/projects/logos/kanban.ico",
+    name: 'SmartHire',
+    favicon: '/images/projects/logos/kanban.ico',
     imageUrl: [
-      "/images/projects/smarthire2.png",
-      "/images/projects/smarthire2.png",
-      "/images/projects/smarthire2.png",
+      '/images/projects/smarthire2.png',
+      '/images/projects/smarthire2.png',
+      '/images/projects/smarthire2.png',
     ],
     description:
-      "Developed a resume shortlisting and interview preparation platform, utilizing machine learning for automated resume filtering. Built with Next.js, Clerk,NextAuth, and PostgreSQL.Achieved an increase in user satisfaction scores from new features by gathering feedback from 200 users during testing phases.",
-    sourceCodeHref: "https://github.com/Mayank8881/SmartHire",
-    liveWebsiteHref: "https://smart-hire-ebon.vercel.app/",
+      'Developed a resume shortlisting and interview preparation platform, utilizing machine learning for automated resume filtering. Built with Next.js, Clerk,NextAuth, and PostgreSQL.Achieved an increase in user satisfaction scores from new features by gathering feedback from 200 users during testing phases.',
+    sourceCodeHref: 'https://github.com/Mayank8881/SmartHire',
+    liveWebsiteHref: 'https://smart-hire-ebon.vercel.app/',
   },
   {
-    name: "ShareFile",
-    favicon: "/images/projects/logos/manygames.ico",
+    name: 'ShareFile',
+    favicon: '/images/projects/logos/manygames.ico',
     imageUrl: [
-      "/images/projects/fileshare.png",
-      "/images/projects/fileshare.png",
-      "/images/projects/fileshare.png",
-      "/images/projects/fileshare.png",
+      '/images/projects/fileshare.png',
+      '/images/projects/fileshare.png',
+      '/images/projects/fileshare.png',
+      '/images/projects/fileshare.png',
       // "/images/projects/manyGamesWordle.webp",
     ],
     description:
-      "ShareFile is a secure and user-friendly file-sharing platform that allows users to upload, store, and share files via Cloudinary. Designed for seamless collaboration, the platform generates shareable links for quick and efficient file distribution. It prioritizes security, ease of use, and reliability to enhance file management for individuals and businesses.",
-    sourceCodeHref: "https://github.com/Mayank8881/sharefile",
-    liveWebsiteHref: "https://sharefile-three.vercel.app/",
+      'ShareFile is a secure and user-friendly file-sharing platform that allows users to upload, store, and share files via Cloudinary. Designed for seamless collaboration, the platform generates shareable links for quick and efficient file distribution. It prioritizes security, ease of use, and reliability to enhance file management for individuals and businesses.',
+    sourceCodeHref: 'https://github.com/Mayank8881/sharefile',
+    liveWebsiteHref: 'https://sharefile-three.vercel.app/',
   },
   // {
   //   name: "My portfolio",

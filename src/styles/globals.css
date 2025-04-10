@@ -51,7 +51,7 @@
 }
 
 .animated-border::before {
-  content: "";
+  content: '';
   position: absolute;
   top: -2px;
   left: -2px;

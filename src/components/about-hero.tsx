@@ -1,12 +1,12 @@
-import Image from "next/image";
-import Link from "next/link";
+import Image from 'next/image';
+import Link from 'next/link';
 
-import { AnimatePresence } from "framer-motion";
+import { AnimatePresence } from 'framer-motion';
 
-import FadeUp from "@/animation/fade-up";
-import FadeRight from "@/animation/fade-right";
-import heroProfileImg from "@/public/images/heroProfile.png";
-import DuotoneImage from "./duotone-image";
+import FadeUp from '@/animation/fade-up';
+import FadeRight from '@/animation/fade-right';
+import heroProfileImg from '@/public/images/heroProfile.png';
+import DuotoneImage from './duotone-image';
 
 export default function AboutHero() {
   return (
@@ -43,10 +43,10 @@ export default function AboutHero() {
           </FadeUp>
           <FadeUp key="description-2" duration={0.6} delay={0.4}>
             <p className="mt-8 text-base font-medium text-zinc-900 dark:text-zinc-300 sm:text-lg md:text-lg">
-              Explore my latest{" "}
+              Explore my latest{' '}
               <Link href="/projects" className="underline underline-offset-4">
                 <span className="text-accent">projects</span>
-              </Link>{" "}
+              </Link>{' '}
               showcasing my expertise in Reactjs, Nextjs, Javascript, Typescript
               and web development.
             </p>

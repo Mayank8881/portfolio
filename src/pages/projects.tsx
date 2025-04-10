@@ -1,8 +1,8 @@
-import { NextSeo } from "next-seo";
+import { NextSeo } from 'next-seo';
 
-import ProjectCard from "@/components/projects/project-card";
-import { PROJECTS_CARD } from "@/data/projects";
-import { siteMetadata } from "@/data/siteMetaData.mjs";
+import ProjectCard from '@/components/projects/project-card';
+import { PROJECTS_CARD } from '@/data/projects';
+import { siteMetadata } from '@/data/siteMetaData.mjs';
 
 export default function Projects() {
   return (
@@ -13,26 +13,26 @@ export default function Projects() {
         canonical={`${siteMetadata.siteUrl}/projects`}
         openGraph={{
           url: `${siteMetadata.siteUrl}/projects`,
-          title: "Discover Projects by Mayank Mokhere - Software Developer",
+          title: 'Discover Projects by Mayank Mokhere - Software Developer',
           description:
-            "Explore a showcase of projects crafted by Mayank Mokhere, a Software Developer. Witness the fusion of creativity and technology in web development.",
+            'Explore a showcase of projects crafted by Mayank Mokhere, a Software Developer. Witness the fusion of creativity and technology in web development.',
           images: [
             {
               url: `${siteMetadata.siteUrl}`,
-              alt: "Mayank Mokhere - Portfolio Image",
+              alt: 'Mayank Mokhere - Portfolio Image',
             },
           ],
           siteName: siteMetadata.siteName,
-          type: "website",
+          type: 'website',
         }}
         twitter={{
-          cardType: "summary_large_image",
+          cardType: 'summary_large_image',
         }}
         additionalMetaTags={[
           {
-            property: "keywords",
+            property: 'keywords',
             content:
-              "Projects,Amit Portfolio, Software Developer, React Developer, Frontend Developer, Web Development, JavaScript, HTML, CSS, UI/UX, Web Applications, Responsive Design",
+              'Projects,Amit Portfolio, Software Developer, React Developer, Frontend Developer, Web Development, JavaScript, HTML, CSS, UI/UX, Web Applications, Responsive Design',
           },
         ]}
       />
@@ -57,7 +57,7 @@ export default function Projects() {
               computing to broaden my expertise beyond Full Stack.
             </span>
             <p className="mt-10 text-base md:text-xl">
-              Visit my github to see some of the latest projects{" "}
+              Visit my github to see some of the latest projects{' '}
               <a
                 href={`${siteMetadata.github}?tab=repositories`}
                 target="_blank"

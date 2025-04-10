@@ -1,8 +1,8 @@
-import { createTransport } from "nodemailer";
+import { createTransport } from 'nodemailer';
 
 export const sendMail = async function (
   name: string,
-  email: string | "SELF",
+  email: string | 'SELF',
   subject: string,
   message: string,
 ): Promise<{ status: number; message: string }> {
@@ -11,12 +11,12 @@ export const sendMail = async function (
 
   if (!user && !pass) {
     return new Promise((resolve) =>
-      resolve({ status: 500, message: "Internal server error" }),
+      resolve({ status: 500, message: 'Internal server error' }),
     );
   }
 
   const transporter = createTransport({
-    service: "gmail",
+    service: 'gmail',
     auth: {
       user,
       pass,
@@ -26,16 +26,16 @@ export const sendMail = async function (
   const mailOptions = {
     from: process.env.NODEMAILER_USER,
     to: process.env.NODEMAILER_USER,
-    subject: "Portfolio: [" + subject + " ]",
+    subject: 'Portfolio: [' + subject + ' ]',
     text: `${name}: <${email}>\n${message}`,
   };
 
   return new Promise((resolve) => {
     transporter.sendMail(mailOptions, (error) => {
       if (error) {
-        resolve({ status: 500, message: "Failed to send mail" });
+        resolve({ status: 500, message: 'Failed to send mail' });
       } else {
-        resolve({ status: 200, message: "Mail send successfully" });
+        resolve({ status: 200, message: 'Mail send successfully' });
       }
     });
   });

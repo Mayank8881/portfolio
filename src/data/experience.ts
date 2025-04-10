@@ -1,16 +1,16 @@
-import { type ExperienceShowcaseListItemProps } from "@/components/experience/experience-showcase-list-item";
+import { type ExperienceShowcaseListItemProps } from '@/components/experience/experience-showcase-list-item';
 
 export const EXPERIENCE: ExperienceShowcaseListItemProps[] = [
   {
-    title: "Backend Developer",
+    title: 'Backend Developer',
     organisation: {
-      name: "Floretta India",
-      href: "https://www.linkedin.com/company/floretta-india/posts/?feedView=all",
+      name: 'Floretta India',
+      href: 'https://www.linkedin.com/company/floretta-india/posts/?feedView=all',
     },
-    date: "Dec 2024 - Feb 2025",
-    location: "Remote",
+    date: 'Dec 2024 - Feb 2025',
+    location: 'Remote',
     description:
-      "Javascript and Php developer for a startup. Worked on building a web application for the company.",
+      'Javascript and Php developer for a startup. Worked on building a web application for the company.',
   },
   // {
   //   title: "Engineering Trainee",

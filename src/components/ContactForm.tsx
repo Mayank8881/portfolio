@@ -1,4 +1,4 @@
-import { useState, ChangeEvent, FormEvent } from "react";
+import { useState, ChangeEvent, FormEvent } from 'react';
 
 interface FormData {
   name: string;
@@ -8,11 +8,11 @@ interface FormData {
 
 export default function ContactForm() {
   const [formData, setFormData] = useState<FormData>({
-    name: "",
-    email: "",
-    message: "",
+    name: '',
+    email: '',
+    message: '',
   });
-  const [responseMsg, setResponseMsg] = useState<string>("");
+  const [responseMsg, setResponseMsg] = useState<string>('');
   const [isError, setIsError] = useState<boolean>(false);
 
   const handleChange = (
@@ -23,26 +23,26 @@ export default function ContactForm() {
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    setResponseMsg("");
+    setResponseMsg('');
     setIsError(false);
 
     try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
       });
       const data = await res.json();
       if (res.ok) {
         setResponseMsg(data.message);
-        setFormData({ name: "", email: "", message: "" });
+        setFormData({ name: '', email: '', message: '' });
       } else {
         setIsError(true);
-        setResponseMsg(data.error || "Something went wrong.");
+        setResponseMsg(data.error || 'Something went wrong.');
       }
     } catch (error) {
       setIsError(true);
-      setResponseMsg("An unexpected error occurred.");
+      setResponseMsg('An unexpected error occurred.');
     }
   };
 
@@ -113,7 +113,7 @@ export default function ContactForm() {
         {responseMsg && (
           <p
             className={`mt-4 text-sm ${
-              isError ? "text-red-600" : "text-green-600"
+              isError ? 'text-red-600' : 'text-green-600'
             }`}
           >
             {responseMsg}

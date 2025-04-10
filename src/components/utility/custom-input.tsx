@@ -1,6 +1,6 @@
-import { InputHTMLAttributes, forwardRef } from "react";
+import { InputHTMLAttributes, forwardRef } from 'react';
 
-import { classNames } from "@/utility/classNames";
+import { classNames } from '@/utility/classNames';
 
 export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {}
 
@@ -11,7 +11,7 @@ const CustomInput = forwardRef<HTMLInputElement, InputProps>(
         ref={ref}
         {...props}
         className={classNames(
-          "w-full rounded-lg border-none bg-background font-semibold text-accent placeholder:font-normal placeholder:text-zinc-400 focus-within:border-2 focus-within:border-accent focus-within:ring-accent",
+          'w-full rounded-lg border-none bg-background font-semibold text-accent placeholder:font-normal placeholder:text-zinc-400 focus-within:border-2 focus-within:border-accent focus-within:ring-accent',
           className,
         )}
       />
@@ -19,6 +19,6 @@ const CustomInput = forwardRef<HTMLInputElement, InputProps>(
   },
 );
 
-CustomInput.displayName = "CustomInput";
+CustomInput.displayName = 'CustomInput';
 
 export default CustomInput;

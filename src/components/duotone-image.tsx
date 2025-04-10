@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "react";
-import Image, { ImageProps } from "next/image";
-import { StaticImageData } from "next/image";
+import React, { useEffect, useState } from 'react';
+import Image, { ImageProps } from 'next/image';
+import { StaticImageData } from 'next/image';
 
-interface DuotoneImageProps extends Omit<ImageProps, "src"> {
+interface DuotoneImageProps extends Omit<ImageProps, 'src'> {
   src: string | StaticImageData;
   lightColor?: string;
   darkColor?: string;
@@ -14,22 +14,22 @@ const DuotoneImage: React.FC<DuotoneImageProps> = ({
   src,
   width,
   height,
-  className = "",
-  alt = "",
-  lightColor = "#E0FFFF",
-  darkColor = "#004D4D",
+  className = '',
+  alt = '',
+  lightColor = '#E0FFFF',
+  darkColor = '#004D4D',
   contrastFactor = 1.2, // Default contrast enhancement
   sharpnessFactor = 0.5, // Default sharpness
   ...props
 }) => {
-  const [processedImageUrl, setProcessedImageUrl] = useState<string>("");
+  const [processedImageUrl, setProcessedImageUrl] = useState<string>('');
 
   useEffect(() => {
-    const canvas = document.createElement("canvas");
-    const ctx = canvas.getContext("2d");
-    const img = document.createElement("img");
+    const canvas = document.createElement('canvas');
+    const ctx = canvas.getContext('2d');
+    const img = document.createElement('img');
 
-    img.crossOrigin = "anonymous";
+    img.crossOrigin = 'anonymous';
     img.onload = () => {
       canvas.width = img.width;
       canvas.height = img.height;
@@ -103,11 +103,11 @@ const DuotoneImage: React.FC<DuotoneImageProps> = ({
         }
 
         ctx.putImageData(imageData, 0, 0);
-        setProcessedImageUrl(canvas.toDataURL("image/png"));
+        setProcessedImageUrl(canvas.toDataURL('image/png'));
       }
     };
 
-    const imgSrc = typeof src === "string" ? src : src.src;
+    const imgSrc = typeof src === 'string' ? src : src.src;
     img.src = imgSrc;
 
     return () => {

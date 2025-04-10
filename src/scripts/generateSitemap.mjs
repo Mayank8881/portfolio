@@ -1,18 +1,18 @@
-import { writeFileSync } from "fs";
-import { globby } from "globby";
-import prettier from "prettier";
-import { siteMetadata } from "../data/siteMetaData.mjs";
+import { writeFileSync } from 'fs';
+import { globby } from 'globby';
+import prettier from 'prettier';
+import { siteMetadata } from '../data/siteMetaData.mjs';
 
 async function generateSitemap() {
   const prettierConfig = await prettier.resolveConfig(
-    "../../prettier.config.js",
+    '../../prettier.config.js',
   );
 
   const pages = await globby([
-    "src/pages/**/*.tsx",
-    "!src/pages/_*.tsx",
-    "!src/pages/api",
-    "!src/pages/404.tsx",
+    'src/pages/**/*.tsx',
+    '!src/pages/_*.tsx',
+    '!src/pages/api',
+    '!src/pages/404.tsx',
   ]);
 
   const sitemap = `
@@ -21,13 +21,13 @@ async function generateSitemap() {
             ${pages
               .map((page) => {
                 const path = page
-                  .replace(".tsx", "")
-                  .replace("src/pages/", "/")
-                  .replace("/index", "");
+                  .replace('.tsx', '')
+                  .replace('src/pages/', '/')
+                  .replace('/index', '');
 
                 // exclude dynamic routes
-                if (path.includes("[") || path.includes("]")) {
-                  return "";
+                if (path.includes('[') || path.includes(']')) {
+                  return '';
                 }
 
                 return `<url>
@@ -35,20 +35,20 @@ async function generateSitemap() {
                         </url>
                     `;
               })
-              .join("")}
+              .join('')}
         </urlset>
   `;
 
   const formatted = prettier.format(sitemap, {
     ...prettierConfig,
-    parser: "html",
+    parser: 'html',
   });
 
-  writeFileSync("public/sitemap.xml", formatted);
-  writeFileSync("public/robots.txt", robotsTxt);
+  writeFileSync('public/sitemap.xml', formatted);
+  writeFileSync('public/robots.txt', robotsTxt);
 
   console.log(
-    "Successfully generated\n-> Sitemap at public/sitemap.xml\n-> Robots.txt at public/robots.txt",
+    'Successfully generated\n-> Sitemap at public/sitemap.xml\n-> Robots.txt at public/robots.txt',
   );
 }
 

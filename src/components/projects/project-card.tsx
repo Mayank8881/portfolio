@@ -1,10 +1,10 @@
-import Image from "next/image";
+import Image from 'next/image';
 
-import { motion } from "framer-motion";
-import { FiExternalLink } from "react-icons/fi";
+import { motion } from 'framer-motion';
+import { FiExternalLink } from 'react-icons/fi';
 
-import Corosel from "@/components/utility/corosel";
-import { GithubIcon } from "@/components/icons";
+import Corosel from '@/components/utility/corosel';
+import { GithubIcon } from '@/components/icons';
 
 export interface ProjectCardProps {
   name: string;
@@ -21,7 +21,7 @@ export default function ProjectCard(props: ProjectCardProps) {
       initial={{ y: 80 }}
       whileInView={{ y: 0 }}
       transition={{
-        type: "spring",
+        type: 'spring',
         duration: 0.4,
       }}
       className="w-full overflow-hidden rounded-lg border border-accent/20 bg-background shadow-md transition-shadow duration-150 hover:shadow-md hover:shadow-accent/20 dark:bg-zinc-800 dark:hover:shadow-lg"

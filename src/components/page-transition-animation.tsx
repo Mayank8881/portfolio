@@ -1,14 +1,14 @@
-import { motion } from "framer-motion";
+import { motion } from 'framer-motion';
 
 export default function PageTransitionAnimation() {
   return (
     <>
       <motion.div
         className="fixed bottom-0 right-full top-0 z-50 flex h-full w-screen items-center justify-center bg-accent"
-        initial={{ x: "100%", width: "100%" }}
-        animate={{ x: "0%", width: "0%" }}
-        transition={{ duration: 0.6, ease: "easeInOut" }}
-        exit={{ x: ["0%", "100%"], width: ["0%", "100%"] }}
+        initial={{ x: '100%', width: '100%' }}
+        animate={{ x: '0%', width: '0%' }}
+        transition={{ duration: 0.6, ease: 'easeInOut' }}
+        exit={{ x: ['0%', '100%'], width: ['0%', '100%'] }}
       >
         <div className="h-24 w-24 sm:h-32 sm:w-32">
           <svg
@@ -24,9 +24,9 @@ export default function PageTransitionAnimation() {
       </motion.div>
       <motion.div
         className="fixed bottom-0 right-full top-0 z-50 flex h-full w-screen items-center justify-center bg-accent"
-        initial={{ x: "100%", width: "100%" }}
-        animate={{ x: "0%", width: "0%" }}
-        transition={{ delay: 0.2, duration: 0.6, ease: "easeInOut" }}
+        initial={{ x: '100%', width: '100%' }}
+        animate={{ x: '0%', width: '0%' }}
+        transition={{ delay: 0.2, duration: 0.6, ease: 'easeInOut' }}
       >
         <div className="h-24 w-24 sm:h-32 sm:w-32">
           <svg

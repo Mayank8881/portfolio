@@ -1,11 +1,11 @@
-import { useState } from "react";
+import { useState } from 'react';
 
-import { AnimatePresence, AnimationProps, motion, wrap } from "framer-motion";
-import { BiSolidLeftArrow } from "react-icons/bi";
+import { AnimatePresence, AnimationProps, motion, wrap } from 'framer-motion';
+import { BiSolidLeftArrow } from 'react-icons/bi';
 
-import { classNames } from "@/utility/classNames";
+import { classNames } from '@/utility/classNames';
 
-const variant: AnimationProps["variants"] = {
+const variant: AnimationProps['variants'] = {
   enter: (direction: number) => {
     return {
       x: direction > 0 ? 100 : -100,
@@ -60,7 +60,7 @@ export default function Corosel({ aspectRatio = 1, images }: CoroselProps) {
           animate="center"
           exit="exit"
           transition={{
-            x: { type: "spring", stiffness: 300, damping: 30 },
+            x: { type: 'spring', stiffness: 300, damping: 30 },
             opacity: { duration: 0.2 },
           }}
           drag="x"
@@ -87,10 +87,10 @@ export default function Corosel({ aspectRatio = 1, images }: CoroselProps) {
           <span
             key={index}
             className={classNames(
-              "h-2 w-2 rounded-full",
+              'h-2 w-2 rounded-full',
               index === imageIndex
-                ? "bg-accent"
-                : "bg-zinc-700 dark:bg-zinc-400",
+                ? 'bg-accent'
+                : 'bg-zinc-700 dark:bg-zinc-400',
             )}
           ></span>
         ))}
