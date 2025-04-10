@@ -7,7 +7,7 @@ export const PROJECT_SHOWCASE: ProjectShowcaseListItem[] = [
     index: 0,
     title: "InvestyGram",
     href: "/projects",
-    tags: ["Nextjs","Typescript","Gemini-API","MongoDB","Startups","Shadcn ui", "Tailwindcss", "Vercel"],
+    tags: ["Nextjs" ,"Typescript" ,"Gemini-API" ,"MongoDB" ,"Startups"  ,"Shadcn ui" , "Tailwindcss" , "Vercel"],
     image: {
       LIGHT: "/images/projects/investygram.png",
       DARK: "/images/projects/investygram.png",

@@ -1,4 +1,3 @@
-import Head from "next/head";
 import { NextSeo } from "next-seo";
 
 import LandingHero from "@/components/landing-hero";
@@ -64,17 +63,16 @@ export default function Home() {
 
       <section
         id="contact"
-        className="w-1/2 mx-auto flex items-center bg-[hsl(var(--background))] text-black animated-border p-8"
+        className="animated-border mx-auto flex w-1/2 items-center bg-[hsl(var(--background))] p-8 text-black"
       >
-        <div className="max-w-3xl mx-auto px-6 text-center w-full">
-          <h2 className="text-3xl font-bold mb-4">Contact Me</h2>
+        <div className="x-auto w-full max-w-3xl px-6 text-center">
+          <h2 className="mb-4 text-3xl font-bold">Contact Me</h2>
           <p className="mb-8 text-[hsl(var(--muted-foreground))]">
             Have a project in mind or just want to connect? Drop me a message below!
           </p>
           <ContactForm />
         </div>
       </section>
-
     </>
   );
 }
