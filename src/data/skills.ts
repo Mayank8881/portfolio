@@ -1,21 +1,21 @@
 import {
   SiExpress,
-  SiSocketdotio,
-  SiPrisma,
+  // SiSocketdotio,
+  // SiPrisma,
   SiNextdotjs,
   SiFlask,
 } from 'react-icons/si';
 import {
   FramerMotionIcon,
-  ReactRouterDomIcon,
-  VitePwaIcon,
+  // ReactRouterDomIcon,
+  // VitePwaIcon,
 } from '@/components/icons';
 import { type SkillsShowcaseProps } from '@/components/skills/skills-showcase';
 
 // Languages
 import HtmlSvg from '@/public/icons/html.svg';
 import CsssSvg from '@/public/icons/css.svg';
-import SassSvg from '@/public/icons/sass.svg';
+// import SassSvg from '@/public/icons/sass.svg';
 import JavascriptSvg from '@/public/icons/javascript.svg';
 import TypescriptSvg from '@/public/icons/typescript.svg';
 import PythonSvg from '@/public/icons/python.svg';
@@ -23,10 +23,10 @@ import javaSvg from '@/public/icons/java.svg';
 
 // Libraries
 import ReactjsSvg from '@/public/icons/reactjs.svg';
-import SolidjsSvg from '@/public/icons/solidjs.svg';
-import ReduxSvg from '@/public/icons/redux.svg';
+// import SolidjsSvg from '@/public/icons/solidjs.svg';
+// import ReduxSvg from '@/public/icons/redux.svg';
 import TailwindcssSvg from '@/public/icons/tailwindcss.svg';
-import MuiSvg from '@/public/icons/mui.svg';
+// import MuiSvg from '@/public/icons/mui.svg';
 import ViteSvg from '@/public/icons/vite.svg';
 import ShadcnSvg from '@/public/icons/shadcn.svg';
 
@@ -42,8 +42,8 @@ import FirebaseSvg from '@/public/icons/firebase.svg';
 
 // Tools and Tech
 import GitSvg from '@/public/icons/git.svg';
-import DockerSvg from '@/public/icons/docker.svg';
-import AwsSvg from '@/public/icons/aws.svg';
+// import DockerSvg from '@/public/icons/docker.svg';
+// import AwsSvg from '@/public/icons/aws.svg';
 import PostmanSvg from '@/public/icons/postman.svg';
 
 export const SKILLS_DATA: SkillsShowcaseProps['skills'] = [
