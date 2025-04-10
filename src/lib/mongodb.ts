@@ -1,4 +1,3 @@
-// src/lib/mongodb.ts
 import { MongoClient } from 'mongodb';
 
 if (!process.env.MONGODB_URI) {
@@ -16,11 +15,11 @@ declare global {
 }
 
 if (process.env.NODE_ENV === 'development') {
-  if (!globalThis._mongoClientPromise) {
+  if (!global._mongoClientPromise) {
     client = new MongoClient(uri, options);
-    globalThis._mongoClientPromise = client.connect();
+    global._mongoClientPromise = client.connect();
   }
-  clientPromise = globalThis._mongoClientPromise;
+  clientPromise = global._mongoClientPromise;
 } else {
   client = new MongoClient(uri, options);
   clientPromise = client.connect();
