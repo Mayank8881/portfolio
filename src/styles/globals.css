@@ -33,3 +33,49 @@
     @apply min-h-screen bg-background text-foreground;
   }
 }
+
+
+@keyframes borderSweep {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animated-border {
+  position: relative;
+  border-radius: 2rem;
+  padding: 2rem;
+  z-index: 0;
+}
+
+.animated-border::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border-radius: 2rem;
+  background: conic-gradient(
+    from 0deg,
+    hsl(345, 83%, 55%),
+    hsl(345, 83%, 55%, 0) 25%,
+    transparent 50%,
+    hsl(345, 83%, 55%, 0) 75%,
+    hsl(345, 83%, 55%)
+  );
+  animation: borderSweep 4s linear infinite;
+  z-index: -1;
+  mask: 
+    linear-gradient(#000 0 0) content-box, 
+    linear-gradient(#000 0 0);
+  -webkit-mask: 
+    linear-gradient(#000 0 0) content-box, 
+    linear-gradient(#000 0 0);
+  mask-composite: exclude;
+  -webkit-mask-composite: destination-out;
+  padding: 2px;
+}

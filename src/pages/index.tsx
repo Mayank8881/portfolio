@@ -1,10 +1,11 @@
 import Head from "next/head";
-
 import { NextSeo } from "next-seo";
 
 import LandingHero from "@/components/landing-hero";
 import SkillsShowcase from "@/components/skills/skills-showcase";
 import ProjectShowcase from "@/components/projects/project-showcase";
+import ContactForm from "@/components/ContactForm";
+
 import { PROJECT_SHOWCASE } from "@/data/projects";
 import { SKILLS_DATA } from "@/data/skills";
 import { siteMetadata } from "@/data/siteMetaData.mjs";
@@ -23,7 +24,7 @@ export default function Home() {
             "Dive into the world of web development with Mayank Mokhere. Discover a Software Developer with 2 years of expertise, showcasing cutting-edge projects and a commitment to crafting exceptional user interfaces.",
           images: [
             {
-              url: `${siteMetadata.siteUrl}${siteMetadata.twitterImage}`,
+              url: `${siteMetadata.siteUrl}`,
               alt: "Mayank Mokhere - Portfolio Image",
             },
           ],
@@ -41,17 +42,39 @@ export default function Home() {
           },
         ]}
       />
-      <Head>
-        {siteMetadata.googleSiteVerification && (
-          <meta
-            name="google-site-verification"
-            content={siteMetadata.googleSiteVerification}
-          />
-        )}
-      </Head>
+
+
       <LandingHero />
       <SkillsShowcase skills={SKILLS_DATA} />
       <ProjectShowcase projects={PROJECT_SHOWCASE} />
+
+      {/* 🔽 Contact Section */}
+      {/* <section
+        id="contact"
+        className=" w-1/2 mx-auto flex items-center bg-[hsl(var(--background))] text-black"
+      >
+        <div className="max-w-3xl mx-auto px-6 text-center">
+          <h2 className="text-3xl font-bold mb-4">Contact Me</h2>
+          <p className="mb-8 text-[hsl(var(--muted-foreground))]">
+            Have a project in mind or just want to connect? Drop me a message below!
+          </p>
+          <ContactForm />
+        </div>
+      </section> */}
+
+      <section
+        id="contact"
+        className="w-1/2 mx-auto flex items-center bg-[hsl(var(--background))] text-black animated-border p-8"
+      >
+        <div className="max-w-3xl mx-auto px-6 text-center w-full">
+          <h2 className="text-3xl font-bold mb-4">Contact Me</h2>
+          <p className="mb-8 text-[hsl(var(--muted-foreground))]">
+            Have a project in mind or just want to connect? Drop me a message below!
+          </p>
+          <ContactForm />
+        </div>
+      </section>
+
     </>
   );
 }

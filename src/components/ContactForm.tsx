@@ -45,64 +45,66 @@ export default function ContactForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6">
-      <div>
-        <label htmlFor="name" className="block text-sm font-medium text-gray-700">
-          Name
-        </label>
-        <input
-          id="name"
-          name="name"
-          type="text"
-          required
-          value={formData.name}
-          onChange={handleChange}
-          className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
-        />
-      </div>
+    <div className="p-8 rounded-xl shadow-md border border-[hsl(var(--border))]">
+      <form onSubmit={handleSubmit} className="space-y-6">
+        <div>
+          <label htmlFor="name" className="block text-sm font-medium text-[hsl(var(--foreground))]">
+            Name
+          </label>
+          <input
+            id="name"
+            name="name"
+            type="text"
+            required
+            value={formData.name}
+            onChange={handleChange}
+            className="mt-1 block w-full rounded-md border border-[hsl(var(--border))] bg-white text-gray-900 focus:border-[hsl(var(--accent))] focus:ring-[hsl(var(--accent))]"
+          />
+        </div>
 
-      <div>
-        <label htmlFor="email" className="block text-sm font-medium text-gray-700">
-          Email
-        </label>
-        <input
-          id="email"
-          name="email"
-          type="email"
-          required
-          value={formData.email}
-          onChange={handleChange}
-          className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
-        />
-      </div>
+        <div>
+          <label htmlFor="email" className="block text-sm font-medium text-[hsl(var(--foreground))]">
+            Email
+          </label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            required
+            value={formData.email}
+            onChange={handleChange}
+            className="mt-1 block w-full rounded-md border border-[hsl(var(--border))] bg-white text-gray-900 focus:border-[hsl(var(--accent))] focus:ring-[hsl(var(--accent))]"
+          />
+        </div>
 
-      <div>
-        <label htmlFor="message" className="block text-sm font-medium text-gray-700">
-          Message
-        </label>
-        <textarea
-          id="message"
-          name="message"
-          rows={5}
-          required
-          value={formData.message}
-          onChange={handleChange}
-          className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
-        ></textarea>
-      </div>
+        <div>
+          <label htmlFor="message" className="block text-sm font-medium text-[hsl(var(--foreground))]">
+            Message
+          </label>
+          <textarea
+            id="message"
+            name="message"
+            rows={5}
+            required
+            value={formData.message}
+            onChange={handleChange}
+            className="mt-1 block w-full rounded-md border border-[hsl(var(--border))] bg-white text-gray-900 focus:border-[hsl(var(--accent))] focus:ring-[hsl(var(--accent))]"
+          ></textarea>
+        </div>
 
-      <button
-        type="submit"
-        className="inline-flex justify-center px-6 py-2 text-white bg-indigo-600 hover:bg-indigo-700 rounded-md shadow"
-      >
-        Send Message
-      </button>
+        <button
+          type="submit"
+          className="inline-flex justify-center px-6 py-2 text-white bg-[hsl(var(--accent))] hover:bg-[hsl(var(--accent))] hover:text-rose-100 hover:border-rose-300 rounded-md shadow transition-colors duration-200"
+        >
+          Send Message
+        </button>
 
-      {responseMsg && (
-        <p className={`mt-4 text-sm ${isError ? 'text-red-600' : 'text-green-600'}`}>
-          {responseMsg}
-        </p>
-      )}
-    </form>
+        {responseMsg && (
+          <p className={`mt-4 text-sm ${isError ? 'text-red-600' : 'text-green-600'}`}>
+            {responseMsg}
+          </p>
+        )}
+      </form>
+    </div>
   );
 }

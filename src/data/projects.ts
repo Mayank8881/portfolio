@@ -44,7 +44,7 @@ export const PROJECT_SHOWCASE: ProjectShowcaseListItem[] = [
 export const PROJECTS_CARD: ProjectCardProps[] = [
   {
     name: "InvestyGram",
-    favicon: "/images/projects/logos/investygram.ico",
+    favicon: "/images/projects/logos/covidtracker.ico",
     imageUrl: [
       "/images/projects/investygram.png",
       "/images/projects/investygram.png",
