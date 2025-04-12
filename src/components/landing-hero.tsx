@@ -51,11 +51,12 @@ export default function LandingHero() {
                 high-performance, user-focused web applications. Skilled in{' '}
                 <span className="font-semibold text-accent">ReactJS</span>,{' '}
                 <span className="font-semibold text-accent">NextJS</span>,{' '}
-                <span className="font-semibold text-accent">SolidJS</span>, and
+                <span className="font-semibold text-accent">Flask</span>, and
                 an expert in{' '}
                 <span className="font-semibold text-accent">JavaScript</span>,{' '}
+                <span className="font-semibold text-accent">TypeScript</span>,{' '}
                 <span className="font-semibold text-accent">HTML</span> and{' '}
-                <span className="font-semibold text-accent">CSS</span>
+                <span className="font-semibold text-accent">Tailwind-CSS</span>
               </div>
             </FadeUp>
           </AnimatePresence>

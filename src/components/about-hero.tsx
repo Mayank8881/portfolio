@@ -5,26 +5,26 @@ import { AnimatePresence } from 'framer-motion';
 
 import FadeUp from '@/animation/fade-up';
 import FadeRight from '@/animation/fade-right';
-// import heroProfileImg from '@/public/images/heroProfile.png';
-// import DuotoneImage from './duotone-image';
+import heroProfileImg from '@/public/images/hero.png';
+import DuotoneImage from './duotone-image';
 
 export default function AboutHero() {
   return (
-    <div className="mx-auto mt-0 flex max-w-7xl flex-col items-center gap-6 px-6 pt-20 text-center sm:px-14 md:mt-20 md:px-20 lg:mt-0 lg:flex-row lg:text-left">
+    <div className="mx-auto mt-0 flex max-w-7xl flex-col items-center gap-6 px-6 pt-20 text-center sm:px-14 md:mt-20 md:px-20 lg:mt-0 lg:flex-row lg:text-left ">
       <div className="w-full sm:w-1/2 md:w-2/3 lg:inline-block lg:h-full lg:w-1/2">
         <AnimatePresence>
-          {/* <FadeUp key="hero-image" duration={0.6}>
-            <DuotoneImage
+          <FadeUp key="hero-image" duration={0.6}>
+            <Image
               src={heroProfileImg}
               width={100}
               height={100}
               className="h-auto w-full px-0 xl:px-16"
               alt="hero image"
-              lightColor="#E0FFFF"
-              darkColor="#004D4D"
+              // lightColor="#E0FFFF"
+              // darkColor="#004D4D"
               unoptimized
             />
-          </FadeUp> */}
+          </FadeUp>
         </AnimatePresence>
       </div>
       <div className="sm:1/2 mt-10 w-full lg:w-1/2">
