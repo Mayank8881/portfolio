@@ -27,7 +27,7 @@ export default function ExperienceShowcaseList(
       <div ref={ref} className="relative w-full md:mx-auto md:w-[80%]">
         <motion.div
           style={{ scaleY: scrollYProgress }}
-          className="absolute left-9 top-5 h-full w-[5px] origin-top rounded-lg bg-accent"
+          className="absolute left-8 top-5 h-full w-[10px] origin-top rounded-lg bg-accent"
         ></motion.div>
         <ul className="ml-4 w-full items-center">
           {props.details.map((_details, index) => (
