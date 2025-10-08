@@ -18,8 +18,8 @@ export const PROJECT_SHOWCASE: ProjectShowcaseListItem[] = [
       'Vercel',
     ],
     image: {
-      LIGHT: '/images/projects/investygram.png',
-      DARK: '/images/projects/investygram.png',
+      LIGHT: '/images/projects/investygram1.png',
+      DARK: '/images/projects/investygram1.png',
     },
   },
   {
@@ -28,18 +28,18 @@ export const PROJECT_SHOWCASE: ProjectShowcaseListItem[] = [
     href: '/projects',
     tags: ['Reactjs', 'Tailwindcss', 'React-router-dom', 'Redux', 'Vercel'],
     image: {
-      LIGHT: '/images/projects/smarthire.png',
-      DARK: '/images/projects/smarthire.png',
+      LIGHT: '/images/projects/smarthire1.png',
+      DARK: '/images/projects/smarthire1.png',
     },
   },
   {
     index: 2,
-    title: 'DocuTrace',
+    title: 'ShareFile',
     href: '/projects',
-    tags: ['Reactjs', 'Blockchain', 'Tailwindcss', 'Vercel', 'React DND'],
+    tags: ['NextJS', 'Supabase', 'Tailwindcss', 'Vercel', 'Javascript'],
     image: {
-      LIGHT: '/images/projects/kanbanLight.webp',
-      DARK: '/images/projects/kanbanDark.webp',
+      LIGHT: '/images/projects/fileshare.png',
+      DARK: '/images/projects/fileshare.png',
     },
   },
 ];
@@ -49,8 +49,10 @@ export const PROJECTS_CARD: ProjectCardProps[] = [
     name: 'InvestyGram',
     favicon: '/images/projects/logos/covidtracker.ico',
     imageUrl: [
-      '/images/projects/investygram.png',
-      '/images/projects/investygram.png',
+      '/images/projects/investygram1.png',
+      '/images/projects/investygram2.png',
+      '/images/projects/investygram3.png',
+      '/images/projects/investygram5.png',
     ],
     description:
       'Developed a startup-investor matchmaking platform using Next.js, MongoDB, and AI-driven algorithms, optimizing funding accessibility and investor discovery.Implemented a real-time funding system with secure authentication using JWT, enhancing transparency and reducing inefficiencies in startup investments.Engineered a scalable backend with MongoDB, enabling structured investment data storage and seamless investor-startup interactions.Designed an intuitive UI with Tailwind CSS, improving user experience and engagement for both investors and startups.',
@@ -61,9 +63,9 @@ export const PROJECTS_CARD: ProjectCardProps[] = [
     name: 'SmartHire',
     favicon: '/images/projects/logos/kanban.ico',
     imageUrl: [
+      '/images/projects/smarthire1.png',
       '/images/projects/smarthire2.png',
-      '/images/projects/smarthire2.png',
-      '/images/projects/smarthire2.png',
+      '/images/projects/smarthire3.png',
     ],
     description:
       'Developed a resume shortlisting and interview preparation platform, utilizing machine learning for automated resume filtering. Built with Next.js, Clerk,NextAuth, and PostgreSQL.Achieved an increase in user satisfaction scores from new features by gathering feedback from 200 users during testing phases.',
@@ -74,8 +76,6 @@ export const PROJECTS_CARD: ProjectCardProps[] = [
     name: 'ShareFile',
     favicon: '/images/projects/logos/manygames.ico',
     imageUrl: [
-      '/images/projects/fileshare.png',
-      '/images/projects/fileshare.png',
       '/images/projects/fileshare.png',
       '/images/projects/fileshare.png',
       // "/images/projects/manyGamesWordle.webp",
