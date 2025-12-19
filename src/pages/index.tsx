@@ -8,6 +8,8 @@ import ContactForm from '@/components/ContactForm';
 import { PROJECT_SHOWCASE } from '@/data/projects';
 import { SKILLS_DATA } from '@/data/skills';
 import { siteMetadata } from '@/data/siteMetaData.mjs';
+import Snowfall from 'react-snowfall';
+import ThemedSnowfall from '@/animation/snowfall';
 
 export default function Home() {
   return (
@@ -41,7 +43,8 @@ export default function Home() {
           },
         ]}
       />
-
+      {/* <Snowfall color="#1e90ff" snowflakeCount={200}></Snowfall> */}
+      <ThemedSnowfall></ThemedSnowfall>
       <LandingHero />
       <SkillsShowcase skills={SKILLS_DATA} />
       <ProjectShowcase projects={PROJECT_SHOWCASE} />
@@ -65,7 +68,7 @@ export default function Home() {
         className="animated-border mx-auto flex w-1/2 items-center bg-[hsl(var(--background))] p-8 text-black"
       >
         <div className="x-auto w-full max-w-3xl px-6 text-center">
-          <h2 className="mb-4 text-3xl font-bold text-red-700">Contact Me</h2>
+          <h2 className="mb-4 text-3xl font-bold text-blue-700">Contact Me</h2>
           <p className="mb-8 text-[hsl(var(--muted-foreground))]">
             Have a project in mind or just want to connect? Drop me a message
             below!
